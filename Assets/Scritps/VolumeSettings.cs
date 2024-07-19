@@ -7,9 +7,11 @@ public class VolumeSettings : MonoBehaviour
     [SerializeField] private AudioMixer myMixer;
     [SerializeField] private Slider musicSlider;
 
+
     public void setMusicVolume()
     {
         float volume = musicSlider.value;
         myMixer.SetFloat("music", Mathf.Log10(volume)*20); 
+        
     }
 }
